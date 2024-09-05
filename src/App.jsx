@@ -2,16 +2,16 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [botao, setBotao] = useState(0)
+  const [click, setClick] = useState(0)
 
-  function apertarBotao() {
-    setBotao(botao + 1)
+  function apertarClick() {
+    setClick(prevClick => prevClick + 1)
   }
 
   return (
     <div>
-      <h1>Quantidade de Clicks: {botao}</h1>
-      <button onClick={apertarBotao}>Click</button>
+      <h1>Quantidade de Clicks: {click}</h1>
+      <button onClick={apertarClick}>Click</button>
     </div>
   )
 }
